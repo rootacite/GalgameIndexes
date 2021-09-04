@@ -22,7 +22,7 @@ namespace GalgameIndexes {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource1 {
+    public class Resource1 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace GalgameIndexes {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GalgameIndexes.Resource1", typeof(Resource1).Assembly);
@@ -51,7 +51,7 @@ namespace GalgameIndexes {
         ///   使用此强类型资源类的所有资源查找执行重写。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,29 +61,39 @@ namespace GalgameIndexes {
         }
         
         /// <summary>
-        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
-        ///&lt;Data&gt;
-        ///  &lt;Game&gt;
-        ///    &lt;Company&gt;作公司（母）&lt;/Company&gt;
-        ///    &lt;Subsidiary&gt;子分类&lt;/Subsidiary&gt;
-        ///    &lt;Name&gt;游戏名称&lt;/Name&gt;
-        ///    &lt;TranslatedName&gt;游戏译名&lt;/TranslatedName&gt;
-        ///    &lt;Date&gt;发售日&lt;/Date&gt;
-        ///    &lt;Translater&gt;汉化组&lt;/Translater&gt;
-        ///    &lt;Progress&gt;汉化进度&lt;/Progress&gt;
-        ///    &lt;NRank&gt;评分人数&lt;/NRank&gt;
-        ///    &lt;Rank&gt;评分(VNDB)&lt;/Rank&gt;
-        ///    &lt;SRank&gt;总评&lt;/SRank&gt;
-        ///    &lt;Tags /&gt;
-        ///  &lt;/Game&gt;
-        ///  &lt;Game&gt;
-        ///    &lt;Company&gt;UGUST（オーガスト）&lt;/Company&gt;
-        ///    &lt;Subsidiary&gt;*无*&lt;/Subsidiary&gt;
-        ///    &lt;Name&gt;バイナリィ?ポット -Binary Pot-&lt;/Name [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///	&lt;Data&gt;
+        ///		&lt;Game&gt;
+        ///			&lt;Company&gt;AUGUST（オーガスト）&lt;/Company&gt;
+        ///			&lt;Subsidiary&gt;*无*&lt;/Subsidiary&gt;
+        ///			&lt;Name&gt;バイナリィ・ポット -Binary Pot-&lt;/Name&gt;
+        ///			&lt;TranslatedName&gt;Binary Pot&lt;/TranslatedName&gt;
+        ///			&lt;Date&gt;2002/2/22&lt;/Date&gt;
+        ///			&lt;Translater&gt;AUGUST中文化委员会&lt;/Translater&gt;
+        ///			&lt;Progress&gt;汉化完成&lt;/Progress&gt;
+        ///			&lt;NRank&gt;19&lt;/NRank&gt;
+        ///			&lt;Rank&gt;61.9288&lt;/Rank&gt;
+        ///			&lt;SRank&gt;0.30568&lt;/SRank&gt;
+        ///			&lt;Tags/&gt;
+        ///		&lt;/Game&gt;
+        ///		&lt;Game&gt;
+        ///			&lt;Company&gt;AUGUST（オーガスト）&lt;/Company&gt;
+        ///			&lt;Subsidiary&gt;*无*&lt;/Subsidiary&gt;
+        ///			&lt;Name&gt;Princess H [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static string Data {
+        public static string Data {
             get {
                 return ResourceManager.GetString("Data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        public static byte[] wlb {
+            get {
+                object obj = ResourceManager.GetObject("wlb", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

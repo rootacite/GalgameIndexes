@@ -2,13 +2,38 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>netcoreapp3.1-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>C:\Users\14980\source\repos\GalgameIndexes\GalgameIndexes\huaxiang.ico</ApplicationIcon>
+    <Version></Version>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
+    <Company>@Acite不负责任有限公司</Company>
+    <Authors>@Acite</Authors>
+    <Copyright>@Acite</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Data.xml" />
+    <None Remove="huaxiang.ico" />
+    <None Remove="wlb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wlb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="huaxiang.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,7 +54,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resource1.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

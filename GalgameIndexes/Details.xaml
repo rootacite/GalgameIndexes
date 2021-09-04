@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GalgameIndexes"
         mc:Ignorable="d"
-        Title="Details" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="Details" Height="630" Width="370" WindowStyle="None" AllowsTransparency="True"  ResizeMode="NoResize"  Topmost="True" MouseDown="Window_MouseDown" Background="{x:Null}" MouseLeftButtonDown="Window_MouseLeftButtonDown" KeyUp="Window_KeyUp">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid MouseDown="Grid_MouseDown" Margin="5 5 5 5">
+        <Viewbox Margin="0 0 0 0" Stretch="Uniform">
+            <Canvas Height="620" Width="360">
+                <materialDesign:Card Width="360" Height="620">
+                    <materialDesign:Card.Effect>
+                        <DropShadowEffect ShadowDepth="-5" BlurRadius="5" Color="Black"/>
+                    </materialDesign:Card.Effect>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="190" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image x:Name="IM" Height="190" Width="360" Stretch="UniformToFill" Source="pack://application:,,,/wlb.png" />
+                        <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 16 -20" Click="Button_Click" Cursor="Hand">
+                            <materialDesign:PackIcon Kind="Close" />
+                        </Button>
+                        <StackPanel Grid.Row="1" Margin="8 24 8 0">
+                            <TextBlock FontWeight="Bold" FontSize="24">
+      译名
+                            </TextBlock>
+                            <TextBlock x:Name="TName" TextWrapping="Wrap" Text="TName" Margin="15 4 0 0" FontSize="20" />
+                            <TextBlock x:Name="Name" FontWeight="Bold" FontSize="24" Text="原名："/>
+                            <TextBlock x:Name="Company" FontWeight="Bold" FontSize="24" Text="公司："/>
+                            <TextBlock x:Name="Date" FontWeight="Bold" FontSize="24" Text="发售日期："/>
+                            <TextBlock x:Name="Tran" FontWeight="Bold" FontSize="24" Text="汉化组："/>
+                            <TextBlock x:Name="Rank" FontWeight="Bold" FontSize="24" Text="评分："/>
+                            <TextBlock x:Name="Tags" FontWeight="Bold" FontSize="24" Text="标签："/>
+                            <WrapPanel x:Name="TagList" Orientation="Horizontal">
+                                
+                            </WrapPanel>
+                            <Button Margin="50" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="150" ToolTip="Resource name: MaterialDesignRaisedLightButton" Content="复制译名" Click="Button_Click_1" />
+                        </StackPanel>
+                       
+                    </Grid>
+                </materialDesign:Card>
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Window>
