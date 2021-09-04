@@ -731,6 +731,7 @@ namespace GalgameIndexes
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (SortMode.SelectedIndex != 3) 
             ingore_sel = true;
 
             ing_text = SarchIndex.Text;
