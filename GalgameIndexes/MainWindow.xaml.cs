@@ -158,7 +158,12 @@ namespace GalgameIndexes
                         };
                         if (ing_text.Length > 0)
                         {
-                            int index_sr = (item.Content as string).IndexOf(ing_text);
+                            int index_sr = -1;
+                            if (OfindexOffer.IsChecked == true)
+                                index_sr = (item.Content as string).IndexOf(ing_text);
+                            else
+                                index_sr = (item.Content as string).ToLower().IndexOf(ing_text.ToLower());
+
                             if (index_sr != -1)
                             {
                                 if (index_sr == 0)
@@ -738,12 +743,19 @@ namespace GalgameIndexes
             SortMode.SelectedIndex = 3;
 
             Results.Clear();
+
             foreach (var i in Games)
             {
-                if(i.Name.Contains(ing_text)|| i.TranslatedName.Contains(ing_text))
-                {
-                    Results.Add(i);
-                }
+                if (OfindexOffer.IsChecked == true)
+                    if (i.Name.Contains(ing_text) || i.TranslatedName.Contains(ing_text))
+                    {
+                        Results.Add(i);
+                    }
+                if (OfindexOffer.IsChecked == false)
+                    if (i.Name.ToLower().Contains(ing_text.ToLower()) || i.TranslatedName.ToLower().Contains(ing_text.ToLower()))
+                    {
+                        Results.Add(i);
+                    }
             }
 
             FlushList();

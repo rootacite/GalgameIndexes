@@ -65,6 +65,7 @@
                         <ComboBoxItem Content="按原名" />
                     </ComboBox>
                 </StackPanel>
+                <CheckBox x:Name="OfindexOffer" IsThreeState="False" IsChecked="False" Content="区分大小写" Click="ClassicModeCheckBox_Click" Canvas.Left="1200" Canvas.Top="74" />
             </Canvas>
         </Viewbox>
     </Grid>
