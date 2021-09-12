@@ -121,6 +121,9 @@
   <data name="Data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Data.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="huaxiang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>huaxiang.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="wlb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>wlb.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

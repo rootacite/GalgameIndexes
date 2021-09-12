@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>C:\Users\14980\source\repos\GalgameIndexes\GalgameIndexes\huaxiang.ico</ApplicationIcon>
+    <ApplicationIcon>huaxiang.ico</ApplicationIcon>
     <Version></Version>
     <AssemblyVersion></AssemblyVersion>
     <FileVersion></FileVersion>
@@ -24,16 +24,11 @@
 
   <ItemGroup>
     <None Remove="Data.xml" />
-    <None Remove="huaxiang.ico" />
     <None Remove="wlb.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="wlb.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="huaxiang.ico" />
   </ItemGroup>
 
   <ItemGroup>
